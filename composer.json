@@ -1,0 +1,48 @@
+{
+  "name": "reicheltmediadesign/wordpress-rmd-migrate-to-localdev",
+  "description": "WordPress plugin that creates a download of a live site for local development with XAMPP: zip of all files plus a database dump with serialization-safe search and replace.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Philipp Reichelt",
+      "email": "info@reicheltmedia.design",
+      "homepage": "https://reicheltmedia.design"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "yahnis-elsts/plugin-update-checker": "^5.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5",
+    "wp-coding-standards/wpcs": "^3.1",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "php-stubs/wordpress-stubs": "^6.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "RMD\\MigrateToLocaldev\\": "includes/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RMD\\MigrateToLocaldev\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "sort-packages": true,
+    "platform": {
+      "php": "8.1.0"
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs",
+    "phpcbf": "phpcbf",
+    "test": "phpunit"
+  }
+}

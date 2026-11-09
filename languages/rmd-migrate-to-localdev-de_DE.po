@@ -1,0 +1,570 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: RMD Migrate to Localdev 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/reicheltmediadesign/wordpress-rmd-migrate-to-localdev/issues\n"
+"Last-Translator: Philipp Reichelt <info@reicheltmedia.design>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-09 00:00+0000\n"
+"PO-Revision-Date: 2026-11-09 00:00+0100\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: rmd-migrate-to-localdev\n"
+
+#. Plugin Name of the plugin
+#: rmd-migrate-to-localdev.php
+msgid "RMD Migrate to Localdev"
+msgstr "RMD Migrate to Localdev"
+
+#. Plugin URI of the plugin
+#: rmd-migrate-to-localdev.php
+msgid "https://github.com/reicheltmediadesign/wordpress-rmd-migrate-to-localdev"
+msgstr "https://github.com/reicheltmediadesign/wordpress-rmd-migrate-to-localdev"
+
+#. Description of the plugin
+#: rmd-migrate-to-localdev.php
+msgid "Creates a download of a live site for local development with XAMPP: a zip of all files and a database dump with serialization-safe search and replace."
+msgstr "Erzeugt einen Download einer Live-Website für die lokale Entwicklung mit XAMPP: ein Zip aller Dateien und ein Datenbank-Dump mit serialisierungssicherem Suchen und Ersetzen."
+
+#. Author of the plugin
+#: rmd-migrate-to-localdev.php
+msgid "Philipp Reichelt, reichelt media.design"
+msgstr "Philipp Reichelt, reichelt media.design"
+
+#. Author URI of the plugin
+#: rmd-migrate-to-localdev.php
+msgid "https://reicheltmedia.design"
+msgstr "https://reicheltmedia.design"
+
+#: includes/Admin/Page.php:36
+#: includes/Admin/Page.php:37
+#: includes/Admin/Page.php:100
+msgid "Migrate to localdev"
+msgstr "Migrate to localdev"
+
+#: includes/Admin/Page.php:49
+#: includes/Admin/Page.php:183
+msgid "Export"
+msgstr "Export"
+
+#: includes/Admin/Page.php:74
+msgid "Cancel the export and delete its unfinished files?"
+msgstr "Export abbrechen und seine unfertigen Dateien löschen?"
+
+#: includes/Admin/Page.php:75
+msgid "Delete this export permanently?"
+msgstr "Diesen Export endgültig löschen?"
+
+#: includes/Admin/Page.php:76
+msgid "Starting export …"
+msgstr "Export wird gestartet …"
+
+#: includes/Admin/Page.php:77
+msgid "The export stopped with an error:"
+msgstr "Der Export wurde mit einem Fehler angehalten:"
+
+#: includes/Admin/Page.php:78
+msgid "Continue"
+msgstr "Fortsetzen"
+
+#: includes/Admin/Page.php:79
+msgid "Cancel export"
+msgstr "Export abbrechen"
+
+#: includes/Admin/Page.php:80
+msgid "Dismiss"
+msgstr "Ausblenden"
+
+#: includes/Admin/Page.php:81
+#: includes/Export/Report.php:159
+msgid "Warnings"
+msgstr "Warnungen"
+
+#: includes/Admin/Page.php:82
+msgid "Some values still refer to the live site. See MIGRATION.txt."
+msgstr "Einige Werte verweisen noch auf die Live-Website. Siehe MIGRATION.txt."
+
+#: includes/Admin/Page.php:83
+msgid "Done. Download the files and follow MIGRATION.txt."
+msgstr "Fertig. Lade die Dateien herunter und folge der MIGRATION.txt."
+
+#: includes/Admin/Page.php:92
+msgid "You are not allowed to access this page."
+msgstr "Du darfst auf diese Seite nicht zugreifen."
+
+#: includes/Admin/Page.php:104
+msgid "Creates a copy of this site for local development with XAMPP: a zip archive of all files and a database dump in which every address and path of this site is replaced by that of the local copy, safe for serialized data. This site is not changed."
+msgstr "Erzeugt eine Kopie dieser Website für die lokale Entwicklung mit XAMPP: ein Zip-Archiv aller Dateien und einen Datenbank-Dump, in dem jede Adresse und jeder Pfad dieser Website durch die der lokalen Kopie ersetzt ist, sicher für serialisierte Daten. Diese Website wird nicht verändert."
+
+#: includes/Admin/Page.php:106
+msgid "Address"
+msgstr "Adresse"
+
+#: includes/Admin/Page.php:107
+msgid "Server path"
+msgstr "Serverpfad"
+
+#: includes/Admin/Page.php:108
+#: includes/Export/Report.php:37
+msgid "Table prefix"
+msgstr "Tabellenpräfix"
+
+#: includes/Admin/Page.php:112
+#: includes/Export/Job.php:53
+msgid "Multisite networks are not supported."
+msgstr "Multisite-Netzwerke werden nicht unterstützt."
+
+#: includes/Admin/Page.php:131
+#: includes/Export/Report.php:35
+msgid "Local copy"
+msgstr "Lokale Kopie"
+
+#: includes/Admin/Page.php:133
+msgid "Folder in htdocs"
+msgstr "Ordner in htdocs"
+
+#: includes/Admin/Page.php:133
+msgid "Name of the folder the site will live in, e.g. example.com. The archive contains a folder with this name, and the local address ends with it."
+msgstr "Name des Ordners, in dem die Website liegen wird, z. B. example.com. Das Archiv enthält einen Ordner mit diesem Namen, und die lokale Adresse endet damit."
+
+#: includes/Admin/Page.php:134
+msgid "Database name"
+msgstr "Datenbankname"
+
+#: includes/Admin/Page.php:134
+msgid "Name of the local database. Empty = same as the folder. It is written into wp-config.php and created by the dump."
+msgstr "Name der lokalen Datenbank. Leer = wie der Ordner. Er wird in die wp-config.php geschrieben, und der Dump legt die Datenbank an."
+
+#: includes/Admin/Page.php:135
+msgid "Database user"
+msgstr "Datenbankbenutzer"
+
+#: includes/Admin/Page.php:135
+msgid "User of the local MySQL server for wp-config.php. XAMPP default: root."
+msgstr "Benutzer des lokalen MySQL-Servers für die wp-config.php. XAMPP-Standard: root."
+
+#: includes/Admin/Page.php:136
+msgid "Database password"
+msgstr "Datenbankpasswort"
+
+#: includes/Admin/Page.php:136
+msgid "Password of that local user for wp-config.php. XAMPP default: empty. It is saved on this site for the next export, so only enter the password of your local development server here."
+msgstr "Passwort dieses lokalen Benutzers für die wp-config.php. XAMPP-Standard: leer. Es wird auf dieser Website für den nächsten Export gespeichert, gib hier also nur das Passwort deines lokalen Entwicklungsservers ein."
+
+#: includes/Admin/Page.php:137
+msgid "htdocs path"
+msgstr "htdocs-Pfad"
+
+#: includes/Admin/Page.php:137
+msgid "Path of the htdocs folder of XAMPP. Server paths stored in the database are replaced by this path plus the folder."
+msgstr "Pfad des htdocs-Ordners von XAMPP. In der Datenbank gespeicherte Serverpfade werden durch diesen Pfad plus Ordner ersetzt."
+
+#: includes/Admin/Page.php:138
+msgid "Local address"
+msgstr "Lokale Adresse"
+
+#: includes/Admin/Page.php:138
+msgid "Address of the local web server without the folder. Change it if Apache uses another port, e.g. http://localhost:8080."
+msgstr "Adresse des lokalen Webservers ohne den Ordner. Ändere sie, wenn Apache einen anderen Port nutzt, z. B. http://localhost:8080."
+
+#: includes/Admin/Page.php:141
+#: includes/Admin/Page.php:143
+msgid "Files"
+msgstr "Dateien"
+
+#: includes/Admin/Page.php:143
+msgid "Pack the complete WordPress folder. Without it only the database is exported."
+msgstr "Den kompletten WordPress-Ordner packen. Ohne wird nur die Datenbank exportiert."
+
+#: includes/Admin/Page.php:144
+msgid "Uploads"
+msgstr "Uploads"
+
+#: includes/Admin/Page.php:144
+msgid "Include the media library (wp-content/uploads). Without it the archive is much smaller, but images are missing in the local copy."
+msgstr "Die Mediathek (wp-content/uploads) mitnehmen. Ohne ist das Archiv deutlich kleiner, aber in der lokalen Kopie fehlen die Bilder."
+
+#: includes/Admin/Page.php:145
+msgid "Leave out"
+msgstr "Auslassen"
+
+#: includes/Admin/Page.php:145
+msgid "One rule per line, like .gitignore: \"name\" matches everywhere, \"/name\" only in the WordPress folder, a trailing \"/\" only folders, \"*\" is a wildcard. wp-config.php and .htaccess are replaced by versions for the local copy; the export folder and this plugin are always left out."
+msgstr "Eine Regel pro Zeile, wie in .gitignore: „name“ passt überall, „/name“ nur im WordPress-Ordner, ein „/“ am Ende nur auf Ordner, „*“ ist ein Platzhalter. wp-config.php und .htaccess werden durch Fassungen für die lokale Kopie ersetzt; der Exportordner und dieses Plugin werden immer ausgelassen."
+
+#: includes/Admin/Page.php:148
+#: includes/Admin/Page.php:234
+#: includes/Export/Report.php:36
+#: includes/Export/Report.php:122
+msgid "Database"
+msgstr "Datenbank"
+
+#: includes/Admin/Page.php:150
+msgid "Tables without data"
+msgstr "Tabellen ohne Daten"
+
+#: includes/Admin/Page.php:150
+msgid "Table names without prefix, one per line. They are created empty, e.g. logs or indexes that plugins rebuild."
+msgstr "Tabellennamen ohne Präfix, einer pro Zeile. Sie werden leer angelegt, z. B. Protokolle oder Indizes, die Plugins neu aufbauen."
+
+#: includes/Admin/Page.php:151
+msgid "Relative links"
+msgstr "Relative Links"
+
+#: includes/Admin/Page.php:151
+msgid "Adjust links without a domain like \"/wp-content/…\" to the local folder."
+msgstr "Links ohne Domain wie „/wp-content/…“ an den lokalen Ordner anpassen."
+
+#: includes/Admin/Page.php:152
+msgid "Revisions"
+msgstr "Revisionen"
+
+#: includes/Admin/Page.php:152
+msgid "Leave out post revisions."
+msgstr "Revisionen von Beiträgen auslassen."
+
+#: includes/Admin/Page.php:153
+msgid "Spam"
+msgstr "Spam"
+
+#: includes/Admin/Page.php:153
+msgid "Leave out spam and trashed comments."
+msgstr "Spam und Kommentare im Papierkorb auslassen."
+
+#: includes/Admin/Page.php:154
+msgid "Search engines"
+msgstr "Suchmaschinen"
+
+#: includes/Admin/Page.php:154
+msgid "Discourage search engines from indexing the copy (Settings → Reading), in case it is ever reachable from outside."
+msgstr "Suchmaschinen davon abhalten, die Kopie zu indexieren (Einstellungen → Lesen), falls sie jemals von außen erreichbar ist."
+
+#: includes/Admin/Page.php:160
+msgid "Create export"
+msgstr "Export erstellen"
+
+#: includes/Admin/Page.php:174
+msgid "Exports"
+msgstr "Exporte"
+
+#. translators: %s: number of hours
+#: includes/Admin/Page.php:178
+#, php-format
+msgid "Exports contain the complete database including user accounts. They are deleted automatically %s hours after they were created, and when the plugin is deactivated."
+msgstr "Exporte enthalten die komplette Datenbank einschließlich der Benutzerkonten. Sie werden %s Stunden nach dem Erstellen automatisch gelöscht, ebenso beim Deaktivieren des Plugins."
+
+#: includes/Admin/Page.php:184
+msgid "Downloads"
+msgstr "Downloads"
+
+#: includes/Admin/Page.php:185
+msgid "Deleted on"
+msgstr "Wird gelöscht am"
+
+#: includes/Admin/Page.php:203
+msgid "running"
+msgstr "läuft"
+
+#: includes/Admin/Page.php:203
+msgid "incomplete"
+msgstr "unvollständig"
+
+#: includes/Admin/Page.php:221
+msgid "Delete"
+msgstr "Löschen"
+
+#: includes/Admin/Page.php:233
+msgid "Files (zip)"
+msgstr "Dateien (Zip)"
+
+#: includes/Admin/Page.php:235
+msgid "MIGRATION.txt"
+msgstr "MIGRATION.txt"
+
+#: includes/Admin/Page.php:285
+msgid "Export deleted."
+msgstr "Export gelöscht."
+
+#: includes/Admin/Page.php:291
+#: includes/Export/Download.php:31
+msgid "You are not allowed to do this."
+msgstr "Du darfst das nicht tun."
+
+#: includes/Export/DatabaseExport.php:54
+msgid "No tables with the prefix of this site were found."
+msgstr "Es wurden keine Tabellen mit dem Präfix dieser Website gefunden."
+
+#: includes/Export/DatabaseExport.php:390
+msgid "Writing the database dump failed. Is the disk full?"
+msgstr "Der Datenbank-Dump konnte nicht geschrieben werden. Ist der Speicherplatz voll?"
+
+#: includes/Export/Download.php:44
+msgid "This file does not exist any more. Exports are deleted automatically; create a new one."
+msgstr "Diese Datei gibt es nicht mehr. Exporte werden automatisch gelöscht; erstelle einen neuen."
+
+#. translators: %s: folder path
+#: includes/Export/Exports.php:41
+#, php-format
+msgid "The export folder %s could not be created or is not writable."
+msgstr "Der Exportordner %s konnte nicht angelegt werden oder ist nicht beschreibbar."
+
+#. translators: %s: file path
+#: includes/Export/Exports.php:194
+#, php-format
+msgid "Could not open %s for writing."
+msgstr "%s konnte nicht zum Schreiben geöffnet werden."
+
+#: includes/Export/Exports.php:217
+msgid "Invalid export name."
+msgstr "Ungültiger Exportname."
+
+#. translators: %s: file path
+#: includes/Export/Exports.php:244
+#, php-format
+msgid "Could not delete %s."
+msgstr "%s konnte nicht gelöscht werden."
+
+#. translators: %s: folder path
+#: includes/Export/FileExport.php:45
+#, php-format
+msgid "Folder could not be read and was skipped: %s"
+msgstr "Ordner konnte nicht gelesen werden und wurde übersprungen: %s"
+
+#. translators: %s: folder path
+#: includes/Export/FileExport.php:81
+#, php-format
+msgid "Linked folder was skipped: %s"
+msgstr "Verknüpfter Ordner wurde übersprungen: %s"
+
+#: includes/Export/FileExport.php:109
+msgid "The file list of this export is missing."
+msgstr "Die Dateiliste dieses Exports fehlt."
+
+#. translators: %s: file path
+#: includes/Export/FileExport.php:139
+#, php-format
+msgid "File could not be read and is missing in the archive: %s"
+msgstr "Datei konnte nicht gelesen werden und fehlt im Archiv: %s"
+
+#: includes/Export/FileExport.php:185
+msgid "Writing the file list failed. Is the disk full?"
+msgstr "Die Dateiliste konnte nicht geschrieben werden. Ist der Speicherplatz voll?"
+
+#: includes/Export/Finisher.php:70
+msgid "wp-config.php was not found. Create one for the local copy yourself."
+msgstr "wp-config.php wurde nicht gefunden. Lege für die lokale Kopie selbst eine an."
+
+#. translators: %s: name of a PHP constant
+#: includes/Export/Finisher.php:112
+#, php-format
+msgid "wp-config.php does not define %s in the usual way. Check the database access in the local copy."
+msgstr "wp-config.php definiert %s nicht auf die übliche Weise. Prüfe den Datenbankzugang in der lokalen Kopie."
+
+#: includes/Export/Finisher.php:125
+#: includes/Export/Finisher.php:131
+msgid "The database dump could not be compressed."
+msgstr "Der Datenbank-Dump konnte nicht komprimiert werden."
+
+#. translators: %s: file path
+#: includes/Export/Finisher.php:158
+#, php-format
+msgid "Could not write %s."
+msgstr "%s konnte nicht geschrieben werden."
+
+#: includes/Export/Job.php:56
+msgid "Another export is still running. Continue or cancel it first."
+msgstr "Ein anderer Export läuft noch. Setze ihn zuerst fort oder brich ihn ab."
+
+#: includes/Export/Job.php:63
+msgid "The export folder could not be created."
+msgstr "Der Exportordner konnte nicht angelegt werden."
+
+#: includes/Export/Job.php:121
+msgid "There is no export to continue."
+msgstr "Es gibt keinen Export zum Fortsetzen."
+
+#: includes/Export/Job.php:127
+msgid "The export is busy with the previous step. Please wait a moment."
+msgstr "Der Export ist noch mit dem vorherigen Schritt beschäftigt. Bitte warte einen Moment."
+
+#. translators: 1: table name, 2: number of the table, 3: number of tables
+#: includes/Export/Job.php:254
+#, php-format
+msgid "Exporting table %1$s (%2$d of %3$d) …"
+msgstr "Exportiere Tabelle %1$s (%2$d von %3$d) …"
+
+#. translators: %s: number of files
+#: includes/Export/Job.php:261
+#, php-format
+msgid "Collecting files … %s found"
+msgstr "Sammle Dateien … %s gefunden"
+
+#. translators: 1: packed files, 2: all files, 3: packed size, 4: total size
+#: includes/Export/Job.php:266
+#, php-format
+msgid "Packing files … %1$s of %2$s (%3$s of %4$s)"
+msgstr "Packe Dateien … %1$s von %2$s (%3$s von %4$s)"
+
+#: includes/Export/Job.php:272
+msgid "Compressing the database and writing the report …"
+msgstr "Komprimiere die Datenbank und schreibe den Bericht …"
+
+#: includes/Export/Job.php:273
+msgid "Export finished."
+msgstr "Export abgeschlossen."
+
+#: includes/Export/Report.php:33
+msgid "Created"
+msgstr "Erstellt"
+
+#: includes/Export/Report.php:34
+msgid "Source"
+msgstr "Quelle"
+
+#: includes/Export/Report.php:40
+msgid "Contents"
+msgstr "Inhalt"
+
+#. translators: 1: folder name, 2: number of files, 3: total size
+#: includes/Export/Report.php:44
+#, php-format
+msgid "The site in a folder named %1$s (%2$s files, %3$s), with a wp-config.php and .htaccess for the local copy."
+msgstr "Die Website in einem Ordner namens %1$s (%2$s Dateien, %3$s), mit einer wp-config.php und .htaccess für die lokale Kopie."
+
+#. translators: %s: database name
+#: includes/Export/Report.php:52
+#, php-format
+msgid "Database dump for phpMyAdmin. It creates the database %s if it does not exist; tables with the same names are replaced."
+msgstr "Datenbank-Dump für phpMyAdmin. Er legt die Datenbank %s an, falls es sie nicht gibt; Tabellen mit gleichen Namen werden ersetzt."
+
+#: includes/Export/Report.php:57
+msgid "Next steps"
+msgstr "Nächste Schritte"
+
+#. translators: 1: zip file name, 2: htdocs path, 3: resulting folder path
+#: includes/Export/Report.php:62
+#, php-format
+msgid "Unpack %1$s into %2$s, so that the site is in %3$s."
+msgstr "Entpacke %1$s nach %2$s, sodass die Website in %3$s liegt."
+
+#. translators: 1: address of phpMyAdmin, 2: file name of the dump
+#: includes/Export/Report.php:70
+#, php-format
+msgid "Start Apache and MySQL in XAMPP, open %1$s and import %2$s on the Import tab without selecting a database first."
+msgstr "Starte Apache und MySQL in XAMPP, öffne %1$s und importiere %2$s über den Reiter „Importieren“, ohne vorher eine Datenbank auszuwählen."
+
+#. translators: 1: path of the mysql program, 2: database user, 3: file name of the unpacked dump
+#: includes/Export/Report.php:76
+#, php-format
+msgid "If the dump is too large for phpMyAdmin, unpack it and import it on the command line: \"%1$s\" -u %2$s -p < %3$s"
+msgstr "Ist der Dump für phpMyAdmin zu groß, entpacke ihn und importiere ihn auf der Kommandozeile: \"%1$s\" -u %2$s -p < %3$s"
+
+#. translators: %s: address of the local site
+#: includes/Export/Report.php:83
+#, php-format
+msgid "Open %s and log in with the users and passwords of the live site."
+msgstr "Öffne %s und melde dich mit den Benutzern und Passwörtern der Live-Website an."
+
+#: includes/Export/Report.php:86
+msgid "Save Settings → Permalinks once."
+msgstr "Speichere einmal Einstellungen → Permalinks."
+
+#: includes/Export/Report.php:92
+msgid "Good to know"
+msgstr "Gut zu wissen"
+
+#. translators: 1: database name, 2: database user
+#: includes/Export/Report.php:97
+#, php-format
+msgid "wp-config.php uses the database %1$s with the user %2$s and the password you entered, has new security keys and WP_ENVIRONMENT_TYPE \"local\". Other secrets of the live site in it (e.g. API keys) are unchanged."
+msgstr "wp-config.php nutzt die Datenbank %1$s mit dem Benutzer %2$s und dem eingegebenen Passwort, hat neue Sicherheitsschlüssel und WP_ENVIRONMENT_TYPE „local“. Andere Geheimnisse der Live-Website darin (z. B. API-Schlüssel) sind unverändert."
+
+#. translators: %s: file name
+#: includes/Export/Report.php:103
+#, php-format
+msgid ".htaccess only contains the WordPress rules. The file of the live site is included as %s for reference; its redirects and server settings usually do not work with XAMPP."
+msgstr ".htaccess enthält nur die WordPress-Regeln. Die Datei der Live-Website liegt als %s zum Nachschlagen bei; ihre Weiterleitungen und Servereinstellungen funktionieren mit XAMPP meist nicht."
+
+#: includes/Export/Report.php:107
+msgid "The content of the uploads folder was left out, so images and other media are missing in the local copy."
+msgstr "Der Inhalt des Uploads-Ordners wurde ausgelassen, daher fehlen in der lokalen Kopie Bilder und andere Medien."
+
+#: includes/Export/Report.php:111
+msgid "Search engines are discouraged from indexing the copy (Settings → Reading)."
+msgstr "Suchmaschinen werden davon abgehalten, die Kopie zu indexieren (Einstellungen → Lesen)."
+
+#: includes/Export/Report.php:113
+msgid "This plugin is not part of the copy. All other plugins are active as on the live site: cache and security plugins may need to be deactivated, and plugins that send e-mails or orders to third parties keep doing so from the copy."
+msgstr "Dieses Plugin ist nicht Teil der Kopie. Alle anderen Plugins sind aktiv wie auf der Live-Website: Cache- und Sicherheits-Plugins müssen eventuell deaktiviert werden, und Plugins, die E-Mails oder Bestellungen an Dritte senden, tun das auch aus der Kopie heraus."
+
+#: includes/Export/Report.php:115
+msgid "WordPress address and site address differ on the live site. Files outside the WordPress folder (e.g. an index.php one level above) are not part of the archive."
+msgstr "WordPress-Adresse und Website-Adresse unterscheiden sich auf der Live-Website. Dateien außerhalb des WordPress-Ordners (z. B. eine index.php eine Ebene darüber) sind nicht Teil des Archivs."
+
+#: includes/Export/Report.php:126
+msgid "structure only"
+msgstr "nur Struktur"
+
+#. translators: 1: number of rows, 2: number of changed values
+#: includes/Export/Report.php:129
+#, php-format
+msgid "%1$s rows, %2$s values changed"
+msgstr "%1$s Zeilen, %2$s Werte geändert"
+
+#: includes/Export/Report.php:137
+msgid "Please check: references to the live site remain"
+msgstr "Bitte prüfen: Verweise auf die Live-Website sind übrig"
+
+#. translators: %s: list of search terms
+#: includes/Export/Report.php:140
+#, php-format
+msgid "These values still contain %s after the replacement (e-mail addresses are not counted). Often harmless (e.g. a sender name or an SMTP host), sometimes a spelling the plugin does not know."
+msgstr "Diese Werte enthalten nach dem Ersetzen noch %s (E-Mail-Adressen zählen nicht mit). Oft harmlos (z. B. ein Absendername oder ein SMTP-Host), manchmal eine Schreibweise, die das Plugin nicht kennt."
+
+#: includes/Export/Report.php:150
+msgid "Serialized values that could not be read"
+msgstr "Serialisierte Werte, die nicht gelesen werden konnten"
+
+#: includes/Export/Report.php:151
+msgid "These values look like serialized PHP data but are malformed. They were exported unchanged."
+msgstr "Diese Werte sehen aus wie serialisierte PHP-Daten, sind aber fehlerhaft. Sie wurden unverändert exportiert."
+
+#: includes/Rest/ExportController.php:74
+msgid "You are not allowed to export this site."
+msgstr "Du darfst diese Website nicht exportieren."
+
+#: includes/Settings.php:59
+msgid "Enter the name of the folder in htdocs."
+msgstr "Gib den Namen des Ordners in htdocs ein."
+
+#: includes/Settings.php:60
+msgid "The folder name may only contain letters, digits, dots, hyphens and underscores, and no further subfolder."
+msgstr "Der Ordnername darf nur Buchstaben, Ziffern, Punkte, Bindestriche und Unterstriche enthalten und keinen weiteren Unterordner."
+
+#: includes/Settings.php:61
+msgid "The htdocs path must be absolute, e.g. C:/xampp/htdocs."
+msgstr "Der htdocs-Pfad muss absolut sein, z. B. C:/xampp/htdocs."
+
+#: includes/Settings.php:62
+msgid "The local address must start with http:// or https:// and must not contain a query or fragment."
+msgstr "Die lokale Adresse muss mit http:// oder https:// beginnen und darf weder Query noch Fragment enthalten."
+
+#: includes/Settings.php:63
+msgid "The database name may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Der Datenbankname darf nur Buchstaben, Ziffern, Punkte, Bindestriche und Unterstriche enthalten."
+
+#: includes/Settings.php:64
+msgid "The database user contains characters that are not allowed."
+msgstr "Der Datenbankbenutzer enthält unzulässige Zeichen."
+
+#: includes/Settings.php:65
+msgid "The database password is too long or contains line breaks."
+msgstr "Das Datenbankpasswort ist zu lang oder enthält Zeilenumbrüche."
+
+#. translators: 1: required PHP version, 2: current PHP version
+#: rmd-migrate-to-localdev.php:38
+#, php-format
+msgid "RMD Migrate to Localdev requires PHP %1$s or newer. This site runs PHP %2$s, so the plugin stays inactive."
+msgstr "RMD Migrate to Localdev benötigt PHP %1$s oder neuer. Diese Website läuft mit PHP %2$s, daher bleibt das Plugin inaktiv."
